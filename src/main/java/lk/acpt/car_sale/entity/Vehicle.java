@@ -25,7 +25,7 @@ public class Vehicle {
 
     public Vehicle(Integer id, String brand, String model, double engineCap, int noOfGear) {
         this.id = id;
-//        Brand = brand;
+        this.Brand = brand;
         this.Model = model;
         this.engineCap = engineCap;
         this.noOfGear = noOfGear;
