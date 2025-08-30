@@ -1,0 +1,36 @@
+package lk.acpt.car_sale.entity;
+
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Vehicle {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY ) //AUTO
+
+    private Integer id;
+    private String Brand;
+    private String Model;
+    private double engineCap;
+    private int noOfGear;
+
+    public Vehicle(Integer id, String brand, String model, double engineCap, int noOfGear) {
+        this.id = id;
+        Brand = brand;
+        Model = model;
+        this.engineCap = engineCap;
+        this.noOfGear = noOfGear;
+    }
+
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "vehicle")
+    List<SpareParts> sparePart;
+}
