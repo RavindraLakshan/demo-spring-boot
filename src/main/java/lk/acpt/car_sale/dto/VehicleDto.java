@@ -21,7 +21,7 @@ public class VehicleDto {
     private int noOfGear;
 
     public VehicleDto(String brand) {
-        Brand = brand;
+        this.Brand = brand;
     }
 
 }
