@@ -17,7 +17,11 @@ public class Vehicle {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY ) //AUTO
 
-    
+    private Integer id;
+    private String Brand;
+    private String Model;
+    private double engineCap;
+    private int noOfGear;
 
     public Vehicle(Integer id, String brand, String model, double engineCap, int noOfGear) {
         this.id = id;
